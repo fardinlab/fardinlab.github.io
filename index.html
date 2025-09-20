@@ -1,0 +1,1575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardin Sagor - Student | Developer | elitefardin</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ff41;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #030303;
+            --terminal-bg: rgba(13, 2, 8, 0.8);
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Matrix Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.9) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--primary-color);
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .revolution-font {
+            font-family: 'Protest Revolution', sans-serif;
+        }
+        
+        .tech-font {
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        .multi-gradient {
+            background: linear-gradient(90deg, #00ff41, #00bfff, #ff00ff, #ffe600);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientMove 5s infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .terminal {
+            background-color: var(--terminal-bg);
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+        
+        .terminal-header {
+            background-color: rgba(0, 255, 65, 0.1);
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--primary-color);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .terminal-body {
+            padding: 15px;
+        }
+        
+        .command-line {
+            display: flex;
+            align-items: center;
+        }
+        
+        .prompt {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: var(--primary-color);
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .glow-box {
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+        
+        .btn-success {
+            background-color: transparent;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .btn-success:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+        }
+        
+        .btn-outline-success {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .btn-outline-success:hover {
+            background-color: rgba(0, 255, 65, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .profile-role-gradient {
+            background: linear-gradient(90deg, #00ff41, #00bfff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        .linkedin:hover { background-color: #0077b5; color: white; border-color: #0077b5; }
+        .twitter:hover { background-color: #1da1f2; color: white; border-color: #1da1f2; }
+        .github:hover { background-color: #6e5494; color: white; border-color: #6e5494; }
+        .instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; border-color: transparent; }
+        .facebook:hover { background-color: #3b5998; color: white; border-color: #3b5998; }
+        
+        /* Profile Image Fix */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+        
+        /* About Section */
+        .bg-dark {
+            background-color: var(--darker-bg) !important;
+        }
+        
+        .counter {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .counter-label {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+        
+        /* Education Section */
+        .education-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .education-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .education-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .edu-left {
+            left: 0;
+        }
+        
+        .edu-right {
+            left: 50%;
+        }
+        
+        .edu-left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--primary-color);
+        }
+        
+        .edu-right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--primary-color);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--primary-color) transparent transparent;
+        }
+        
+        .edu-green .education-content { border-color: var(--primary-color); }
+        .edu-blue .education-content { border-color: #00bfff; }
+        .edu-gold .education-content { border-color: #ffe600; }
+        
+        .education-content {
+            padding: 20px;
+            background-color: var(--terminal-bg);
+            border: 1px solid;
+            border-radius: 6px;
+        }
+        
+        /* Skills Section */
+        .skill-container {
+            margin-bottom: 20px;
+        }
+        
+        .skill-label {
+            color: #fff;
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .progress-number {
+            color: var(--primary-color);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #00bfff, var(--primary-color));
+            border-radius: 5px;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: var(--darker-bg);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -13px;
+        }
+        
+        .right::after {
+            left: -13px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--terminal-bg);
+            border: 1px solid;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .exp-green .timeline-content { border-color: var(--primary-color); }
+        .exp-blue .timeline-content { border-color: #00bfff; }
+        .exp-gold .timeline-content { border-color: #ffe600; }
+        .exp-purple .timeline-content { border-color: #ff00ff; }
+        .exp-orange .timeline-content { border-color: #ffa500; }
+        
+        .exp-company {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .exp-remote, .exp-location {
+            color: #ccc;
+        }
+        
+        .exp-date {
+            color: #ffe600;
+        }
+        
+        /* Projects Section */
+        .project-card {
+            background-color: var(--terminal-bg);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            border-color: var(--primary-color);
+        }
+        
+        .friendship-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .friendship-link:hover {
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+        
+        /* Contact Section */
+        .form-control {
+            background-color: rgba(13, 2, 8, 0.5) !important;
+            border: 1px solid var(--primary-color) !important;
+            color: var(--primary-color) !important;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.5) !important;
+        }
+        
+        .form-label {
+            color: var(--primary-color);
+        }
+        
+        .contact-info-email h4, 
+        .contact-info-whatsapp h4, 
+        .contact-info-mobile h4, 
+        .contact-info-location h4 {
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        .bg-darker {
+            background-color: var(--darker-bg) !important;
+            border-top: 1px solid var(--primary-color);
+        }
+        
+        .footer-copyright {
+            color: var(--primary-color);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        
+        /* Animations */
+        .icon-pulse {
+            animation: iconPulse 2s infinite;
+        }
+        
+        @keyframes iconPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .icon-bounce {
+            animation: iconBounce 2s infinite;
+        }
+        
+        @keyframes iconBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .icon-spin {
+            animation: iconSpin 4s infinite linear;
+        }
+        
+        @keyframes iconSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .icon-shake {
+            animation: iconShake 0.5s infinite;
+        }
+        
+        @keyframes iconShake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            75% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+        
+        /* Matrix Loader */
+        #hacker-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--darker-bg);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .matrix-loader-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--primary-color);
+            font-family: 'Share Tech Mono', monospace;
+            z-index: 2;
+        }
+        
+        .matrix-loader-text span {
+            font-size: 2rem;
+            display: block;
+        }
+        
+        .matrix-loader-subtext {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        
+        /* Return to Top Button */
+        #return-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--terminal-bg);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            cursor: pointer;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        #return-to-top:hover {
+            background-color: var(--primary-color);
+            color: #000;
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .education-timeline::after,
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .education-item,
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .edu-left::before,
+            .edu-right::before {
+                left: 60px;
+                border: medium solid var(--primary-color);
+                border-width: 10px 10px 10px 0;
+                border-color: transparent var(--primary-color) transparent transparent;
+            }
+            
+            .left::after,
+            .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Hacker Loader -->
+    <div id="hacker-loader">
+      <canvas id="matrix-loader-canvas"></canvas>
+      <div class="matrix-loader-text">
+        <span id="loader-typing-1"></span><br>
+        <span id="loader-typing-2"></span>
+        <div class="matrix-loader-subtext" id="loader-subtext-1"></div>
+        <div class="matrix-loader-subtext" id="loader-subtext-2"></div>
+      </div>
+    </div>
+    
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrix" class="matrix-bg"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX68Fohw3CyPOUDvbqqmWYhWX9HwWeIwnxNeH2UpFP8sk8dXYBqqz68h6_rVuFrf-YtblLsi3DW_4RuQxy4CDxELu4IorM00hiROWO-5x_VBcYu0EyCgDiKmSkqw9i7kyx3mocaYBsX2wJ145969LB3o-AqI7rLfgAdyfiISk9P5RDc2TnEwZTMV0PPo3a/s1094/WhatsApp_Image_2025-09-20_at_7.57.45_PM-removebg-preview.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: #00ff41;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home icon-pulse me-1"></i>HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user icon-bounce me-1"></i>ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap icon-spin me-1"></i>EDUCATION</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code icon-shake me-1"></i>SKILLS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase icon-bounce me-1"></i>EXPERIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram icon-pulse me-1"></i>PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope icon-spin me-1"></i>CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="container py-5 mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 revolution-font glow-text mb-3">Hello, World! <i class="fas fa-hand-wave icon-bounce"></i></h1>
+                <h2 class="h3 tech-font mb-4">I'm <span class="multi-gradient">Fardin Sagor</span></h2>
+                <p class="lead"><i class="fas fa-laptop-code icon-pulse me-2"></i><span id="animated-roles"></span></p>
+                <div class="terminal glow-box mb-4">
+                    <div class="terminal-header">
+                        <span class="me-2"><i class="fas fa-terminal icon-shake"></i> user@fardinsagor:~</span>
+                        <span class="badge bg-danger"><i class="fas fa-shield-alt"></i> root</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span id="typing-text"></span>
+                            <span class="cursor"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="#contact" class="btn btn-outline-success btn-lg tech-font"><i class="fas fa-handshake icon-bounce me-2"></i>Hire Me</a>
+                    <a href="#contact" class="btn btn-success btn-lg tech-font"><i class="fas fa-paper-plane icon-pulse me-2"></i>Message Me</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center mt-4 mt-lg-0">
+                <div class="terminal p-3" style="max-width: 300px;">
+                    <div class="terminal-header text-center">
+                        <i class="fas fa-user-secret icon-spin me-2"></i>Profile
+                    </div>
+                    <div class="terminal-body text-center">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhRV3GuadmkvWH42PkbRFUxxck66a0Zim350pVRhWx-qkQF07jlobKyvKgdMmVn13i-8s632rD0xOH5kiUCcfhhf0eiGgl5SbUvzonEFJOufgl9-gerX8vspH6NIsZ1a_xZBlZ3aS4sHYHncWYhJgj6cwaI9E7VdrZfNIHaspBVWOYgw4n7zbV0oOOneOUe" alt="Profile" class="profile-img floating">
+                        <h3 class="h5 tech-font">Fardin Sagor</h3>
+                        <p class="small"><i class="fas fa-code icon-pulse"></i> CSE Student | Developer</p>
+                        <p class="small"><span class="profile-role-gradient">Front-End Development & Digital Marketer</span></p>
+                        <div class="d-flex justify-content-center gap-3 mt-3 profile-social">
+                            <a href="https://twitter.com/elitefardin" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://github.com/fardinlab" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://instagram.com/elite_fardin" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/elitefardinlab" class="social-icon facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-user icon-bounce me-2"></i>About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="terminal h-100">
+                        <div class="terminal-header">
+                            <i class="fas fa-info-circle icon-pulse me-2"></i>Bio
+                        </div>
+                        <div class="terminal-body">
+                            <p><i class="fas fa-chevron-right icon-shake me-1"></i> Hey there! I'm Fardin Sagor, a student from Bangladesh with a passion for programming, cycling, and education.</p>
+                            <p><i class="fas fa-chevron-right icon-shake me-1"></i> Armed with a strong educational foundation, I've delved into areas like data analysis, cybersecurity, and email server solutions.</p>
+                            <p><i class="fas fa-chevron-right icon-shake me-1"></i> I have comprehensive experience in computer hardware, including installation, troubleshooting, upgrades, and maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="terminal h-100">
+                        <div class="terminal-header">
+                            <i class="fas fa-chart-line icon-pulse me-2"></i>Stats
+                        </div>
+                        <div class="terminal-body">
+                            <div class="row text-center">
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="performance-counter">0%</div>
+                                    <div class="counter-label"><i class="fas fa-bolt icon-shake"></i> PERFORMANCE</div>
+                                </div>
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="friend-counter">0</div>
+                                    <div class="counter-label"><i class="fas fa-heart icon-bounce"></i> BEST FRIEND</div>
+                                </div>
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="certificate-counter">0</div>
+                                    <div class="counter-label"><i class="fas fa-certificate icon-spin"></i> CERTIFICATES</div>
+                                </div>
+                            </div>
+                            <!-- New fun stats row -->
+                            <div class="row text-center">
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="projects-counter">12</div>
+                                    <div class="counter-label"><i class="fas fa-check-circle icon-pulse"></i> PROJECTS COMPLETED</div>
+                                </div>
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="hackathons-counter">3</div>
+                                    <div class="counter-label"><i class="fas fa-trophy icon-bounce"></i> HACKATHONS</div>
+                                </div>
+                                <div class="col-4 mb-4">
+                                    <div class="counter" id="opensource-counter">27</div>
+                                    <div class="counter-label"><i class="fas fa-code-branch icon-shake"></i> OPEN SOURCE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-graduation-cap icon-bounce me-2"></i>Education</h2>
+            <div class="education-timeline">
+                <div class="education-item edu-left edu-green">
+                    <div class="education-content">
+                        <h4 class="tech-font"><i class="fas fa-university icon-pulse me-2"></i>Bachelor of Science in Computer Science and Engineering</h4>
+                        <p class="text-muted"><i class="far fa-calendar icon-spin me-1"></i> 2023 - Ongoing</p>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> I am currently pursuing a Bachelor's degree in Computer Science and Engineering, building strong foundations in software, hardware, and problem-solving.</p>
+                    </div>
+                </div>
+                <div class="education-item edu-right edu-blue">
+                    <div class="education-content">
+                        <h4 class="tech-font"><i class="fas fa-laptop-code icon-pulse me-2"></i>Diploma in Computer Engineering</h4>
+                        <p class="text-muted"><i class="far fa-calendar icon-spin me-1"></i> 2018 - 2021</p>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> I completed my Diploma in Computer Engineering, gaining hands-on experience in technology and practical skills for the IT industry.</p>
+                    </div>
+                </div>
+                <div class="education-item edu-left edu-gold">
+                    <div class="education-content">
+                        <h4 class="tech-font"><i class="fas fa-graduation-cap icon-pulse me-2"></i>Secondary Education</h4>
+                        <p class="text-muted"><i class="far fa-calendar icon-spin me-1"></i> Class 6–10 | 2018 – 2024</p>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> SSC Exam taken in March 2024 (Academic Year 2023), marking a key milestone in my academic journey.</p>
+                    </div>
+                </div>
+                <div class="education-item edu-right edu-gold">
+                    <div class="education-content">
+                        <h4 class="tech-font"><i class="fas fa-pencil-alt icon-pulse me-2"></i>Primary Education</h4>
+                        <p class="text-muted"><i class="far fa-calendar icon-spin me-1"></i> Class 1–5 | 2012 – 2018</p>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> Participated in the Primary Education Completion Exam (PECE), building a strong academic foundation and curiosity for learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-code icon-bounce me-2"></i>Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-database icon-pulse me-1"></i> Data Analysis</span>
+                            <span class="progress-number" id="data-analysis-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65" id="data-analysis-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-shield-alt icon-pulse me-1"></i> Cybersecurity</span>
+                            <span class="progress-number" id="cybersecurity-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75" id="cybersecurity-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-envelope icon-pulse me-1"></i> Email Server Solutions</span>
+                            <span class="progress-number" id="email-server-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="99" id="email-server-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-tools icon-pulse me-1"></i> Troubleshooting</span>
+                            <span class="progress-number" id="troubleshooting-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="100" id="troubleshooting-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-credit-card icon-pulse me-1"></i> Payment Gateways</span>
+                            <span class="progress-number" id="payment-gateways-number">99%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="36" id="payment-gateways-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-server icon-pulse me-1"></i> CPanel</span>
+                            <span class="progress-number" id="cpanel-number">99%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="40" id="cpanel-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-network-wired icon-pulse me-1"></i> WHM</span>
+                            <span class="progress-number" id="whm-number">40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60" id="whm-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-cog icon-pulse me-1"></i> WHMCS</span>
+                            <span class="progress-number" id="whmcs-number">40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60" id="whmcs-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-wifi icon-pulse me-1"></i> Networking</span>
+                            <span class="progress-number" id="networking-number">50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80" id="networking-progress"></div>
+                        </div>
+                    </div>
+                    <!-- Add Linux Administration -->
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fab fa-linux icon-pulse me-1"></i> Linux Administration</span>
+                            <span class="progress-number" id="linux-administration-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70" id="linux-administration-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Programming Languages -->
+                <div class="col-md-6 mt-4">
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fab fa-html5 icon-pulse me-1"></i> HTML/CSS</span>
+                            <span class="progress-number" id="html-css-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85" id="html-css-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fab fa-js-square icon-pulse me-1"></i> JavaScript</span>
+                            <span class="progress-number" id="javascript-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75" id="javascript-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fab fa-php icon-pulse me-1"></i> PHP</span>
+                            <span class="progress-number" id="php-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70" id="php-progress"></div>
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="skill-label"><i class="fas fa-database icon-pulse me-1"></i> MySQL</span>
+                            <span class="progress-number" id="mysql-number">0%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65" id="mysql-progress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-briefcase icon-bounce me-2"></i>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left exp-gold">
+                    <div class="timeline-content">
+                        <h4 class="tech-font"><i class="fas fa-user-cog icon-pulse me-2"></i>Customer Technical Support Engineer</h4>
+                        <p class="text-muted">
+                            <span class="exp-company">LyteHosting LLC</span>
+                            <span class="exp-remote">- Remote,</span>
+                            <span class="exp-location">Boulder CO, US</span>
+                        </p>
+                        <p class="text-muted">
+                            <span class="exp-date">August 2024 - Present</span>
+                        </p>
+                        <ul>
+                            <li>Resolve technical challenges across WHMCS, WHM, Mail Servers, and System configurations.</li>
+                            <li>Manage server optimization, DNS setup, SSL, and email troubleshooting.</li>
+                            <li>Maintain 99.9% uptime with proactive monitoring and performance improvements.</li>
+                            <li>Streamline processes to reduce response times by 30%.</li>
+                            <li>Provide self-service solutions through a detailed knowledge base.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right exp-green">
+                    <div class="timeline-content">
+                        <h4 class="tech-font"><i class="fas fa-server icon-pulse me-2"></i>Jr. Assistant System Engineer</h4>
+                        <p class="text-muted">
+                            <span class="exp-company">IncomIT Solution Ltd</span>
+                            <span class="exp-location">Dhaka</span>
+                        </p>
+                        <p class="text-muted">
+                            <span class="exp-date">November 20, 2022 - December 30, 2023</span>
+                        </p>
+                        <ul>
+                            <li>Server and system management</li>
+                            <li>Linux administration</li>
+                            <li>Domain hosting</li>
+                            <li>WHM and WHMCS configuration</li>
+                            <li>Various IT support and network administration tasks, including hardware and software setup, troubleshooting, and network configuration.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left exp-blue">
+                    <div class="timeline-content">
+                        <h4 class="tech-font"><i class="fas fa-headset icon-pulse me-2"></i>Support Engineer</h4>
+                        <p class="text-muted">
+                            <span class="exp-company">IncomIT Solution Ltd</span>
+                            <span class="exp-location">Dhaka</span>
+                        </p>
+                        <p class="text-muted">
+                            <span class="exp-date">March 1, 2022 - November 15, 2022</span>
+                        </p>
+                        <ul>
+                            <li>Provided extensive IT support</li>
+                            <li>Managed hardware and network troubleshooting</li>
+                            <li>Configured and maintained IT assets</li>
+                            <li>Supported various IT infrastructure needs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right exp-purple">
+                    <div class="timeline-content">
+                        <h4 class="tech-font"><i class="fas fa-language icon-pulse me-2"></i>Translator</h4>
+                        <p class="text-muted">
+                            <span class="exp-company">Freelancer</span>
+                            <span class="exp-location">Dhaka</span>
+                        </p>
+                        <p class="text-muted">
+                            <span class="exp-date">January 1, 2022 - Present</span>
+                        </p>
+                        <ul>
+                            <li>Provided translation services for various types of documents, including technical, business, and legal content.</li>
+                            <li>Translated texts between English and Bengali with a focus on accuracy and cultural nuances.</li>
+                            <li>Delivered high-quality work within tight deadlines.</li>
+                            <li>Assisted clients in improving their written communications and business document.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left exp-orange">
+                    <div class="timeline-content">
+                        <h4 class="tech-font"><i class="fas fa-user-graduate icon-pulse me-2"></i>Intern</h4>
+                        <p class="text-muted">
+                            <span class="exp-company">CSL-IT</span>
+                            <span class="exp-location">Dhaka</span>
+                        </p>
+                        <p class="text-muted">
+                            <span class="exp-date">December 18, 2021 - February 28, 2022</span>
+                        </p>
+                        <ul>
+                            <li>Assisted in various IT tasks</li>
+                            <li>Gained practical experience in system and network support, including Cisco Certified Network Associate (CCNA) and MikroTik router configuration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-project-diagram icon-bounce me-2"></i>Latest Projects</h2>
+            <div class="row g-4">
+                <!-- Bio-Trade International -->
+                <div class="col-md-4">
+                    <div class="project-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 tech-font"><i class="fas fa-briefcase-medical icon-pulse me-2"></i>Bio-Trade International</h3>
+                            <span class="badge bg-success"><i class="fas fa-globe icon-spin"></i> Live</span>
+                        </div>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> Developed a modern, responsive website for a leading medical equipment supplier in Bangladesh. Features product showcase, contact forms, and company profile.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-secondary me-1">HTML</span>
+                            <span class="badge bg-secondary">CSS</span>
+                            <span class="badge bg-secondary">Bootstrap</span>
+                            <span class="badge bg-secondary">JS</span>
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fas fa-link icon-spin me-1"></i> <a href="#" target="_blank">@elitefardin</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Windows Tweaker Tool -->
+                <div class="col-md-4">
+                    <div class="project-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 tech-font"><i class="fab fa-windows icon-pulse me-2"></i>Windows Tweaker Tool</h3>
+                            <span class="badge bg-info"><i class="fab fa-github icon-spin"></i> Open Source</span>
+                        </div>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> CMD-based tool to disable ads, tips, web search, lockscreen clutter, and startup bloatware on Windows. Powerful and easy to use.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-secondary me-1">Batchfile</span>
+                            <span class="badge bg-secondary">Windows</span>
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fab fa-github icon-spin me-1"></i> <a href="#" target="_blank">@elitefardin</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- WHMCS Discord Alert Pro -->
+                <div class="col-md-4">
+                    <div class="project-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="h5 tech-font"><i class="fab fa-discord icon-pulse me-2"></i>WHMCS Discord Alert Pro</h3>
+                            <span class="badge bg-info"><i class="fab fa-github icon-spin"></i> Open Source</span>
+                        </div>
+                        <p><i class="fas fa-arrow-right icon-shake me-1"></i> Advanced WHMCS to Discord notification module with smart embed, responder name, IP geo flags, and developer lock.</p>
+                        <div class="mt-3">
+                            <span class="badge bg-secondary me-1">PHP</span>
+                            <span class="badge bg-secondary">WHMCS</span>
+                            <span class="badge bg-secondary">Discord</span>
+                        </div>
+                        <div class="mt-3 text-muted small">
+                            <i class="fab fa-github icon-spin me-1"></i> <a href="#" target="_blank">@elitefardin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <p class="mb-0">You want friendship with me? <a href="#contact" class="friendship-link"><i class="fas fa-handshake icon-bounce me-1"></i>Click here</a> to Message me! 👋</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center tech-font glow-text mb-5"><i class="fas fa-envelope icon-bounce me-2"></i>Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="terminal h-100">
+                        <div class="terminal-header">
+                            <i class="fas fa-paper-plane icon-pulse me-2"></i>Let's talk about everything!
+                        </div>
+                        <div class="terminal-body">
+                            <p class="mb-4"><i class="fas fa-comment-dots icon-bounce me-1"></i> Send me an Mail, message me on WhatsApp, or give me a call. 👋</p>
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label class="form-label"><i class="fas fa-user icon-shake me-1"></i> Your Name</label>
+                                    <input type="text" id="name" class="form-control bg-dark text-success border-success" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label"><i class="fas fa-envelope icon-shake me-1"></i> Your Email</label>
+                                    <input type="email" id="email" class="form-control bg-dark text-success border-success" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label"><i class="fas fa-comment icon-shake me-1"></i> Your Message</label>
+                                    <textarea id="message" class="form-control bg-dark text-success border-success" rows="4" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100"><i class="fas fa-paper-plane icon-bounce me-1"></i>Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="terminal h-100">
+                        <div class="terminal-header">
+                            <i class="fas fa-network-wired icon-pulse me-2"></i>Contact Info
+                        </div>
+                        <div class="terminal-body">
+                            <div class="mb-4 contact-info-email">
+                                <h4 class="h5 tech-font"><i class="fas fa-envelope icon-bounce me-2"></i>Email</h4>
+                                <p><i class="fas fa-arrow-right icon-shake me-1"></i> elitefardin@gmail.com</p>
+                            </div>
+                            <div class="mb-4 contact-info-whatsapp">
+                                <h4 class="h5 tech-font"><i class="fab fa-whatsapp icon-bounce me-2"></i>WhatsApp</h4>
+                                <p><i class="fas fa-arrow-right icon-shake me-1"></i> +8801322230857</p>
+                            </div>
+                            <div class="mb-4 contact-info-mobile">
+                                <h4 class="h5 tech-font"><i class="fas fa-phone icon-bounce me-2"></i>Mobile</h4>
+                                <p><i class="fas fa-arrow-right icon-shake me-1"></i> +8801932378913</p>
+                            </div>
+                            <div class="mb-4 contact-info-location">
+                                <h4 class="h5 tech-font"><i class="fas fa-map-marker-alt icon-bounce me-2"></i>Location</h4>
+                                <p><i class="fas fa-arrow-right icon-shake me-1"></i> Jashore, Bangladesh</p>
+                            </div>
+                            <div>
+                                <h4 class="h5 tech-font mb-3"><i class="fas fa-share-alt icon-bounce me-2"></i>Connect With Me</h4>
+                                <div class="d-flex justify-content-center gap-3 mt-3 profile-social">
+                                    <a href="https://twitter.com/elitefardin" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://github.com/fardinlab" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://instagram.com/elite_fardin" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://facebook.com/elitefardinlab" class="social-icon facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-4 bg-darker text-center">
+        <div class="container">
+            <p class="mb-0 footer-copyright"><i class="far fa-copyright icon-spin"></i> <span id="current-year"></span> Fardin Sagor. All rights reserved.</p>
+            <p class="small mt-2" id="current-date-time"></p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+   <script>
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Matrix rain animation for background
+        const matrixCanvas = document.getElementById('matrix');
+        if (!matrixCanvas) {
+            console.error('Matrix canvas element not found');
+            return;
+        }
+        
+        const matrixCtx = matrixCanvas.getContext('2d');
+        
+        function resizeMatrixCanvas() {
+            matrixCanvas.width = window.innerWidth;
+            matrixCanvas.height = window.innerHeight;
+        }
+        
+        window.addEventListener('resize', resizeMatrixCanvas);
+        resizeMatrixCanvas();
+        
+        const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&!?*';
+        const fontSize = 14;
+        let columns = Math.floor(matrixCanvas.width / fontSize);
+        const drops = [];
+        
+        // Initialize drops
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.floor(Math.random() * matrixCanvas.height / fontSize);
+        }
+        
+        function drawMatrix() {
+            matrixCtx.fillStyle = 'rgba(10, 10, 10, 0.04)';
+            matrixCtx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+            
+            matrixCtx.fillStyle = '#00ff41';
+            matrixCtx.font = `${fontSize}px monospace`;
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+                matrixCtx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if (drops[i] * fontSize > matrixCanvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+            
+            // Use requestAnimationFrame for better performance
+            requestAnimationFrame(drawMatrix);
+        }
+        
+        // Start the animation
+        drawMatrix();
+        
+        // Typing animation for hero section
+        const roleElement = document.getElementById('animated-roles');
+        if (roleElement) {
+            const roles = ["CSE Student", "Developer", "Front-End Developer", "Digital Marketer"];
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingDelay = 100;
+            
+            function typeRoles() {
+                const currentRole = roles[roleIndex];
+                
+                if (isDeleting) {
+                    roleElement.textContent = currentRole.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingDelay = 50;
+                } else {
+                    roleElement.textContent = currentRole.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingDelay = 100;
+                }
+                
+                if (!isDeleting && charIndex === currentRole.length) {
+                    isDeleting = true;
+                    typingDelay = 1000;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    typingDelay = 500;
+                }
+                
+                setTimeout(typeRoles, typingDelay);
+            }
+            
+            typeRoles();
+        }
+        
+        // Terminal typing effect
+        const typingElement = document.getElementById('typing-text');
+        if (typingElement) {
+            const terminalTexts = [
+                "whoami",
+                "ls -la",
+                "cd ~/projects",
+                "cat portfolio.txt",
+                "echo 'Welcome to my portfolio!'",
+                "sudo make impact"
+            ];
+            let textIndex = 0;
+            let termCharIndex = 0;
+            let isTermDeleting = false;
+            let termDelay = 100;
+            
+            function typeTerminal() {
+                const currentText = terminalTexts[textIndex];
+                
+                if (isTermDeleting) {
+                    typingElement.textContent = currentText.substring(0, termCharIndex - 1);
+                    termCharIndex--;
+                    termDelay = 50;
+                } else {
+                    typingElement.textContent = currentText.substring(0, termCharIndex + 1);
+                    termCharIndex++;
+                    termDelay = 100;
+                }
+                
+                if (!isTermDeleting && termCharIndex === currentText.length) {
+                    isTermDeleting = true;
+                    termDelay = 1000;
+                } else if (isTermDeleting && termCharIndex === 0) {
+                    isTermDeleting = false;
+                    textIndex = (textIndex + 1) % terminalTexts.length;
+                    termDelay = 500;
+                }
+                
+                setTimeout(typeTerminal, termDelay);
+            }
+            
+            typeTerminal();
+        }
+        
+        // Counter animation
+        function animateCounter(elementId, finalValue, duration) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            const startValue = 0;
+            const increment = Math.ceil(finalValue / (duration / 16));
+            let currentValue = startValue;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    element.textContent = finalValue + (elementId.includes('counter') ? '' : '%');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = currentValue + (elementId.includes('counter') ? '' : '%');
+                }
+            }, 16);
+        }
+        
+        // Skill bar animation
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                const numberId = bar.id.replace('progress', 'number');
+                bar.style.width = width + '%';
+                animateCounter(numberId, parseInt(width), 2000);
+            });
+        }
+        
+        // Check if element is in viewport
+        function isInViewport(element) {
+            if (!element) return false;
+            
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        
+        // Animate elements when they come into view
+        function checkAnimation() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                if (isInViewport(counter) && (counter.textContent === '0' || counter.textContent === '0%')) {
+                    const id = counter.id;
+                    let finalValue;
+                    
+                    if (id === 'performance-counter') finalValue = 100;
+                    else if (id === 'friend-counter') finalValue = 1;
+                    else if (id === 'certificate-counter') finalValue = 10;
+                    else if (id === 'projects-counter') finalValue = 12;
+                    else if (id === 'hackathons-counter') finalValue = 3;
+                    else if (id === 'opensource-counter') finalValue = 27;
+                    else return;
+                    
+                    animateCounter(id, finalValue, 2000);
+                }
+            });
+            
+            const skillSection = document.getElementById('skills');
+            if (skillSection && isInViewport(skillSection)) {
+                animateSkillBars();
+            }
+        }
+        
+        // Set current year and date
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+        
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById('current-date-time');
+            if (!dateTimeElement) return;
+            
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            dateTimeElement.textContent = now.toLocaleDateString('en-US', options);
+        }
+        
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // In a real implementation, you would send this data to a server
+                console.log('Form submitted:', { name, email, message });
+                
+                // Show a success message (in a real implementation)
+                alert('Message sent successfully! I\'ll get back to you soon.');
+                this.reset();
+            });
+        }
+        
+        // Initialize scroll animations
+        window.addEventListener('scroll', checkAnimation);
+        checkAnimation(); // Check on initial load
+        
+        // Matrix Loader Animation
+        const loaderCanvas = document.getElementById('matrix-loader-canvas');
+        if (loaderCanvas) {
+            const ctx = loaderCanvas.getContext('2d');
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            loaderCanvas.width = width;
+            loaderCanvas.height = height;
+
+            const letters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const fontSize = 18;
+            const columns = Math.floor(width / fontSize);
+            const drops = Array(columns).fill(1);
+
+            function drawLoaderMatrix() {
+                ctx.fillStyle = 'rgba(13,2,8,0.15)';
+                ctx.fillRect(0, 0, width, height);
+                ctx.font = fontSize + 'px monospace';
+                ctx.fillStyle = '#00ff41';
+                for (let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            let matrixInterval = setInterval(drawLoaderMatrix, 33);
+
+            // Responsive
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                loaderCanvas.width = width;
+                loaderCanvas.height = height;
+            });
+
+            // Typing effect for loader
+            const text1 = "WELCOME, To My World";
+            const text2 = "ACCESS GRANTED_";
+            const sub1 = "Initializing system...";
+            const sub2 = "Decrypting profile...";
+            let i1 = 0, i2 = 0;
+
+            function typeLine1() {
+                const typingElement1 = document.getElementById('loader-typing-1');
+                if (!typingElement1) return;
+                
+                if (i1 <= text1.length) {
+                    typingElement1.textContent = text1.slice(0, i1);
+                    i1++;
+                    setTimeout(typeLine1, 70);
+                } else {
+                    setTimeout(typeLine2, 300);
+                }
+            }
+            
+            function typeLine2() {
+                const typingElement2 = document.getElementById('loader-typing-2');
+                if (!typingElement2) return;
+                
+                if (i2 <= text2.length) {
+                    typingElement2.textContent = text2.slice(0, i2);
+                    i2++;
+                    setTimeout(typeLine2, 70);
+                } else {
+                    setTimeout(() => {
+                        const subtext1 = document.getElementById('loader-subtext-1');
+                        const subtext2 = document.getElementById('loader-subtext-2');
+                        
+                        if (subtext1) {
+                            subtext1.textContent = sub1;
+                            subtext1.style.opacity = 1;
+                        }
+                        
+                        setTimeout(() => {
+                            if (subtext2) {
+                                subtext2.textContent = sub2;
+                                subtext2.style.opacity = 1;
+                            }
+                        }, 400);
+                    }, 300);
+                }
+            }
+            
+            typeLine1();
+
+            // Hide loader after 5s
+            setTimeout(function() {
+                const loader = document.getElementById('hacker-loader');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    setTimeout(function() {
+                        loader.style.display = 'none';
+                        clearInterval(matrixInterval);
+                        
+                        // Add Return to Top Button only after loader is hidden
+                        const returnToTopBtn = document.createElement('button');
+                        returnToTopBtn.id = 'return-to-top';
+                        returnToTopBtn.title = 'Back to Top';
+                        returnToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+                        document.body.appendChild(returnToTopBtn);
+                        returnToTopBtn.style.display = 'none';
+                        
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 300) {
+                                returnToTopBtn.style.display = 'block';
+                            } else {
+                                returnToTopBtn.style.display = 'none';
+                            }
+                        });
+                        
+                        returnToTopBtn.addEventListener('click', function() {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        });
+                    }, 500);
+                }
+            }, 5000);
+        }
+    });
+</script>
+</body>
+</html>
